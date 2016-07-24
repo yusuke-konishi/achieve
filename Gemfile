@@ -55,3 +55,6 @@ gem 'pry-rails'
 gem 'pry-doc'
 gem 'pry-byebug'
 end
+
+# DIVE07 heroku
+gem 'rails_12factor', group: :production
