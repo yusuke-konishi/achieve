@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy] do
     collection do
       post :confirm
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   
   # "もどる" 実行時の new アクションに POST を追加
   match "contacts/new", :via => :post, :as => 'new_contact_post'
-  # 単純に post で new アクションに飛ばすなら… (@ 7/24 宮下さんのテーマ授業)
+  # 単純に post で new アクションに飛ばすなら… (@ 2016/07/24 宮下さんのテーマ授業)
   # post 'contacts/new' => 'contacts#new'
   
   root 'top#index'

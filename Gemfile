@@ -58,3 +58,6 @@ end
 
 # DIVE07 heroku
 gem 'rails_12factor', group: :production
+
+# DIVE08
+gem 'devise'
