@@ -61,3 +61,6 @@ gem 'rails_12factor', group: :production
 
 # DIVE08
 gem 'devise'
+
+# DIVE09
+gem 'faker'
