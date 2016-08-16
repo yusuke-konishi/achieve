@@ -1,11 +1,18 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-    <h3>以下の内容で、送信する。</h3>
+    <h2>以下の内容で、送信する。</h2>
+    <div class="clearfix">
+      <p class="pull-right">User ID <%= current_user.id %>: <%= current_user.name %> の投稿</p>
+    </div>
     <%= form_for(@blog) do |f| %>
       <%= f.hidden_field :title %>
       <%= f.hidden_field :content %>
-      <p>タイトル:<%= @blog.title %></p>
-      <p>本文:<%= @blog.content %></p>
+      <%= f.label :タイトル %>
+      <p class="confirm"><%= @blog.title %></p>
+      <br>
+      <%= f.label :内容 %>
+      <p class="confirm"><%= @blog.content %></p>
+      <br>
       <%= f.submit "登録", class: 'btn btn-primary btn-block' %>
     <% end %>
     <%#= form_for(@blog, url: new_blog_path, method: 'get') do |f| %>
