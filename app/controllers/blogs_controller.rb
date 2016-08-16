@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:edit, :update, :destroy]
   
   def index
-    @blogs = Blog.order("created_at").reverse_order
+    @blogs = Blog.order("id").reverse_order
   end
   
   def new
