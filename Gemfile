@@ -51,7 +51,7 @@ gem 'jquery-turbolinks'
 
 # Lesson 02
 group :development, :test do
-gem 'pry-rails'  
+gem 'pry-rails'
 gem 'pry-doc'
 gem 'pry-byebug'
 end
@@ -64,3 +64,8 @@ gem 'devise'
 
 # DIVE09
 gem 'faker'
+
+# DIVE11
+group :development do
+  gem 'letter_opener_web'
+end

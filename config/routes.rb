@@ -14,14 +14,18 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  
+
   # "もどる" 実行時の new アクションに POST を追加
   match "contacts/new", :via => :post, :as => 'new_contact_post'
   # 単純に post で new アクションに飛ばすなら… (@ 2016/07/24 宮下さんのテーマ授業)
   # post 'contacts/new' => 'contacts#new'
-  
+
   root 'top#index'
-  
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
