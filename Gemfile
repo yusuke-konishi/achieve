@@ -69,3 +69,8 @@ gem 'faker'
 group :development do
   gem 'letter_opener_web'
 end
+
+# DIVE12
+gem 'therubyracer', platforms: :ruby
+gem 'rails_admin'
+gem 'cancan'
