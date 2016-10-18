@@ -49,11 +49,12 @@ gem 'twitter-bootstrap-rails'
 # DIVE05 JavaScript
 gem 'jquery-turbolinks'
 
-# Lesson 02
+# Lesson 02 & DIVE13
 group :development, :test do
-gem 'pry-rails'
-gem 'pry-doc'
-gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'better_errors'
 end
 
 # DIVE07 heroku
