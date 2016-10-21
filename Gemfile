@@ -69,9 +69,16 @@ gem 'faker'
 # DIVE11
 group :development do
   gem 'letter_opener_web'
+  # DIVE14
+  gem 'dotenv-rails'
 end
 
 # DIVE12
 gem 'therubyracer', platforms: :ruby
 gem 'rails_admin'
 gem 'cancan'
+
+# DIVE14
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
