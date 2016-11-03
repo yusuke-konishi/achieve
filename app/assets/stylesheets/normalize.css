@@ -421,3 +421,8 @@ textarea {
 img{
   max-width: 100%;
 }
+
+#profile_img{
+  height: 40px;
+  width: 40px;
+}
