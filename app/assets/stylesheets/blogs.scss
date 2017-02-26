@@ -47,3 +47,8 @@ input[type="submit"].btn-block{
   word-wrap: break-word;
   text-align: left;
 }
+
+// app/views/blogs/show.html.erb のコメント一覧
+#comments_area {
+  word-wrap: break-word;
+}
