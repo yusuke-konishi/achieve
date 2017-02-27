@@ -1,0 +1,21 @@
+<div class="container">
+  <h2><%= @user.name %>さんのフォローユーザー</h2>
+  <table class="table" id="follow-table">
+    <tr>
+      <th></th>
+      <th>名前</th>
+      <th>メールアドレス</th>
+    </tr>
+    <%= render partial: 'users/followed_index', locals: { followed_users: @followed_users, user: @user } %>
+  </table>
+
+  <h2><%= @user.name %>さんのフォロワーユーザー</h2>
+  <table class="table" id="follow-table">
+    <tr>
+      <th></th>
+      <th>名前</th>
+      <th>メールアドレス</th>
+    </tr>
+    <%= render partial: 'users/follower_index', locals: { followers: @followers, user: @user } %>
+  </table>  
+</div>

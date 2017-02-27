@@ -1,3 +1,15 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ユーザーのテーブル
+#follow-table{
+  text-align: left;
+  //margin-right: auto
+}
+
+// ユーザーのプロフィール画像
+#follow-img{
+  height: 50px;
+  width: 50px;
+}

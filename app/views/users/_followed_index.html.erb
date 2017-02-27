@@ -1,0 +1,9 @@
+<% followed_users.each do |followed_user| %>
+  <% unless followed_user.id.nil? %>
+    <tr>
+      <td id="follow-img"><%= profile_img(followed_user) %></td>
+      <td><%= followed_user.name %></td>
+      <td><%= followed_user.email %></td>
+    </tr>
+  <% end %>
+<% end %>
