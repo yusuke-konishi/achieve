@@ -16,7 +16,7 @@
           <% end %>
         </td>
         <td><%= user.email %></td>
-        <td><%= render 'follow_form', user: user %></td>
+        <td><%= render 'follow_form', user: user unless user == current_user %></td>
       </tr>
     <% end %>
   </table>
