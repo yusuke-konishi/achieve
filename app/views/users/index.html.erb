@@ -4,20 +4,18 @@
     <tr>
       <th></th>
       <th>名前</th>
-      <th>メールアドレス</th>
+      <th>メッセージ</th>
       <th>フォロー</th>
     </tr>
     <% @users.each do |user| %>
-      <tr>
-        <td id="follow-img"><%= profile_img(user) %></td>
-        <td>
-          <%= link_to user_path(user) do %>
-            <strong><%= user.name %></strong>
-          <% end %>
-        </td>
-        <td><%= user.email %></td>
-        <td><%= render 'follow_form', user: user unless user == current_user %></td>
-      </tr>
+      <% if user.id != current_user.id %>
+        <tr>
+          <td id="follow-img"><%= profile_img(user) %></td>
+          <td><%= link_to user.name, user %></td>
+          <td><%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%></td>
+          <td><%= render partial: 'follow_form', locals: { user: user } if signed_in? %></td>
+        </tr>
+      <% end %>
     <% end %>
   </table>
 </div>
