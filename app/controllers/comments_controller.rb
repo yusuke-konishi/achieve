@@ -8,9 +8,11 @@ class CommentsController < ApplicationController
         format.html { redirect_to blog_path(@blog), notice: 'コメントを投稿しました。' }
         format.json { render :show, status: :created, location: @comment }
         format.js { render :index }
-        Pusher.trigger('test_channel', 'comment_created', {
-          message: 'あなたの作成したブログにコメントが付きました'
-        })
+        unless @comment.blog.user_id == current_user.id
+          Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'comment_created', {
+            message: 'あなたの作成したブログにコメントが付きました'
+          })
+        end
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
