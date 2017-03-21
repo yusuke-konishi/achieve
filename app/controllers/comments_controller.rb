@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
     @blog = @comment.blog
+    @notification = @comment.notifications.build(user_id: @blog.user.id )
 
     respond_to do |format|
       if @comment.save
