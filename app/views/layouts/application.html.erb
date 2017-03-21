@@ -48,6 +48,11 @@
               </ul>
             </li>
             <% if user_signed_in? %>
+              <li>
+                <%= link_to notifications_index_path do %>
+                  <i class="fa fa-bell fa-1x"><%= @notifications_count %></i>
+                <% end %>
+              </li>
               <li><%= link_to 'マイページ', edit_user_registration_path %></li>
               <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
             <% else %>
