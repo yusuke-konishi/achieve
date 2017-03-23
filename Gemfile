@@ -41,6 +41,12 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 # DIVE04 Bootstrap
@@ -70,7 +76,7 @@ gem 'faker'
 group :development do
   gem 'letter_opener_web'
   # DIVE14
-  gem 'dotenv-rails'
+  # gem 'dotenv-rails'
 end
 
 # DIVE12
@@ -90,3 +96,6 @@ gem 'rmagick'
 gem 'pusher'
 
 gem 'fog'
+
+gem 'dotenv-rails'
+gem 'unicorn'
