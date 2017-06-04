@@ -72,10 +72,15 @@ gem 'jquery-turbolinks'
 
 # Lesson 02 & DIVE13
 group :development, :test do
-  gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-byebug'
+end
+
+# DIVE22
+group :development do
+  gem 'pry-rails'
   gem 'better_errors'
+  gem 'binding_of_caller' # "Only works with MRI 1.9.2, 1.9.3, 2.0, 2.1 and RBX (Rubinius)" https://github.com/banister/binding_of_caller
 end
 
 # DIVE07 heroku
